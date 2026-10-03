@@ -1,4 +1,4 @@
-# Hassan & Fatima wedding invitation
+# Hassan wedding invitation
 
 A static Arabic and English wedding invitation with an animated cover, countdown, map link, calendar download, and WhatsApp contact.
 
