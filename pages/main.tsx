@@ -1,8 +1,10 @@
 import React from "react";
 import { createRoot } from "react-dom/client";
-import Invitation from "../app/invitation";
+import Invitation, { inviterFromQuery } from "../app/invitation";
 import { languageFromQuery, invitationMetadata } from "../lib/invitation-language";
 import "../app/globals.css";
-const language=languageFromQuery(new URLSearchParams(window.location.search).get("lang"));
+const query = new URLSearchParams(window.location.search);
+const language=languageFromQuery(query.get("lang"));
+const inviter=inviterFromQuery(query.get("inviter"));
 document.title=invitationMetadata(language).title;
-createRoot(document.getElementById("root")!).render(<Invitation initialLanguage={language}/>);
+createRoot(document.getElementById("root")!).render(<Invitation initialLanguage={language} inviter={inviter}/>);
