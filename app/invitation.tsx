@@ -13,7 +13,7 @@ export function inviterFromQuery(value: unknown): Inviter {
 export function invitationWords(lang: InvitationLanguage, inviter?: Inviter) {
   const base = words[lang];
   if (!inviter) return base;
-  const relation = inviter === "ma" ? "ولدي" : "أخي";
+  const relation = inviter === "ma" ? "ولدي العزيز" : "أخي العزيز";
   const englishRelation = inviter === "ma" ? "son" : "brother";
   return {
     ...base,
